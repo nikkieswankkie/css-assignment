@@ -1,0 +1,149 @@
+/* General reset for margin, padding, box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and container styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    flex-direction: column; /* Stack logo and form on small screens */
+}
+
+.logo img {
+    max-width: 150px; /* Adjust size of the logo */
+    margin-bottom: 20px;
+}
+
+
+/* Hide both instructions by default */
+.small-screen-instructions {
+    display: none;
+}
+
+.large-screen-instructions {
+    display: none;
+    max-width: 450px;
+}
+
+/* Media query for large screens (desktop/laptops) */
+@media (min-width: 768px) {
+    .large-screen-instructions {
+        display: block; /* Show instructions for large screens */
+    }
+}
+
+/* Media query for small screens (mobile/tablet) */
+@media (max-width: 767px) {
+    .small-screen-instructions {
+        display: block; /* Show instructions for small screens */
+    }
+}
+
+/* Form container styles */
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0367f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0255d6;
+}
+
+.terms {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.terms a {
+    color: #0367f2;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* Media queries for large and small screens */
+
+/* On large screens (768px and above) */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Align logo and form side by side */
+    }
+
+    .logo {
+        margin-right: 30px;
+        flex: 1; /* Logo takes up part of the space */
+    }
+
+    .form-container {
+        flex: 2; /* Form takes up more space */
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* On small screens (below 768px) */
+@media (max-width: 767px) {
+    .logo {
+        margin-bottom: 20px; /* Add space between logo and form */
+    }
+
+    .form-container {
+        width: 100%;
+    }
+}

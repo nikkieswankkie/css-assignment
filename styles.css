@@ -1,0 +1,703 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Light background for contrast */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out logo and menu */
+    padding: 15px 20px;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 20px;  /* Space between logo and menu */
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;  /* Space between menu items */
+}
+
+.nav-menu ul li {
+    display: inline;
+}
+
+/* Specifically target 'My URLs' link */
+.nav-menu ul li:first-child a {
+    color: #007bff;  /* Blue color for "My URLs" */
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-menu ul li:first-child a:hover {
+    color: #0056b3;  /* Darker blue on hover */
+}
+
+.nav-menu ul li a {
+    color: black;  /* Set other menu items to black */
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    color: #ffcc00; /* Gold/yellow hover effect */
+}
+
+.cta-button {
+    background-color: #007bff;  /* Blue background */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 25px;  /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+}
+
+.login-link {
+    color: #007bff;  /* Blue text */
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;  /* Removes underline */
+    transition: color 0.3s ease;
+}
+
+.login-link:hover {
+    color: #0056b3;  /* Darker blue on hover */
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;  /* Reduced gap to make the buttons closer */
+}
+
+.banner {
+    background-color: transparent; /* Transparent background */
+    color: black; /* Black text */
+    text-align: center;
+    padding: 30px 250px;
+    margin-top: 80px; /* Adjust to avoid overlap with fixed header */
+    /*width: 948px;*/
+    align-items: center;
+}
+
+.banner-header {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.banner-text {
+    font-size: 14px;
+    padding: 80px 180px;
+}
+
+.url-short {
+    position: inherit;
+    color:#005ae2;
+}
+
+.url-short::after {
+    content: url(url_underline.png);
+    position: absolute;
+    top: 26%;
+    left: 45%;
+}
+
+.signup-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+.box-container-1 {
+    background: linear-gradient(to right, #f0f4f8, #ffffff); /* Light gradient */
+    border-radius: 12px;
+    padding: 20px 80px;
+    width: 80%;
+    max-width: 800px;
+    height: 200px;
+    margin: 40px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chain-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+}
+
+.box-container-1-text {
+    text-align: center;
+    font-size: 14px;
+}
+
+.background-triangle {
+    z-index: -1;
+    /* height: 300%; */
+    position: absolute;
+    top: 510px;
+    left: 360px;
+}
+
+.ellipse-1 {
+    z-index: 2;
+    /* height: 300%; */
+    position: relative;
+    top: -75px;
+    left: 250px;
+}
+
+/* Chain Links */
+.chain {
+    display: flex;
+    gap: 10px;
+}
+
+.link {
+    width: 40px;
+    height: 20px;
+    border: 5px solid black;
+    border-left: none;
+    border-right: none;
+    border-radius: 50px;
+    position: relative;
+}
+
+/* Arrow */
+.arrow {
+    font-size: 24px;
+    font-weight: bold;
+    color: blue;
+}
+
+
+/* Section styling */
+.stats-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+    background: #F9FBFD;
+    height: 150px;
+    vertical-align: middle;
+}
+
+/* Heading */
+.heading h1 {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.heading h1 span {
+    color: #1a73e8; /* Blue color for "Possibilities." */
+}
+
+/* Stats container */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    max-width: 1200px;
+}
+
+
+/* Individual stat block */
+.stat {
+    text-align: center;
+    padding: 10px 15px;
+    position: relative;
+}
+
+/* Big numbers */
+.stat h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Small descriptions */
+.stat p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+
+/* Parent container */
+.features-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Left side: Title & paragraph */
+.features-text {
+    width: 40%;
+}
+
+.features-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.features-text h1 span {
+    color: #1a73e8; /* Blue color for "Scissors" */
+}
+
+.features-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Right side: Features grid */
+.features-grid {
+    width: 55%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 30px;
+}
+
+/* Each feature box */
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* Circle icon */
+.feature .icon {
+    width: 50px;
+    height: 50px;
+    background-color: #e3e9ff; /* Light blue circle */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+/* Feature titles */
+.feature h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Feature descriptions */
+.feature p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Pricing Section */
+.pricing-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.pricing-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pricing-section .highlight {
+    color: #2d66ff;
+    font-weight: bold;
+}
+
+.pricing-subtext {
+    color: #555;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* Pricing Container */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+/* Pricing Cards */
+.pricing-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+    text-align: left;
+    height: 400px;
+}
+
+.pricing-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Professional Plan (Highlighted) */
+.pricing-card.professional {
+    background: #1E3448;
+    color: #fff;
+    transform: scale(1.1);
+    border: none;
+}
+
+.professional .price,
+.professional .description,
+.professional ul {
+    color: #fff;
+}
+
+/* List Styles */
+.pricing-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pricing-card ul li {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+/* Buttons */
+.pricing-buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.outline-btn {
+    border: 2px solid #2d66ff;
+    background: transparent;
+    color: #2d66ff;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.outline-btn:hover {
+    background: #2d66ff;
+    color: white;
+}
+
+.solid-btn {
+    background: #2d66ff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
+
+.solid-btn:hover {
+    background: #1c4fd1;
+}
+
+/* Container Styling */
+.url-shortener-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 50%;
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.url-shortener-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-image: url("desktop-11.png");
+    height: 400px;
+}
+
+/* Input Styling */
+.input-box {
+    font-size: 16px;
+    padding: 12px 16px;
+    border: 2px solid #4C7AF1;
+    border-radius: 10px;
+    background: transparent;
+    outline: none;
+    color: #4C7AF1;
+    transition: all 0.3s ease;
+}
+
+.input-box::placeholder {
+    color: #4C7AF1;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Dropdown & Alias Group */
+.input-group {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+}
+
+.input-box select {
+    cursor: pointer;
+}
+
+/* Trim Button */
+.trim-button {
+    width: 100%;
+    background: #2E5BEF;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.trim-button:hover {
+    background: #1E4ACC;
+}
+
+/* Terms & Conditions */
+.terms {
+    font-size: 14px;
+    text-align: center;
+    color: #4C7AF1;
+    max-width: 400px;
+}
+
+.terms strong {
+    font-weight: bold;
+}
+
+/* FAQ Container */
+.faq-container {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    font-family: "Arial", sans-serif;
+}
+
+/* FAQ Title */
+.faq-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* FAQ Item */
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+/* Question */
+.faq-question {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+}
+
+/* Answer */
+.faq-answer {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+.pre-footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-image: url("desktop-21.png");
+    height: 250px;
+}
+
+.pre-footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    /* max-width: 500px; */
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.pre-footer-text {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 28px;
+    padding-bottom: 30px;
+}
+
+.pre-footer-button {
+    width: 150px;
+    background: #2E5BEF;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #fff;
+    padding: 40px 60px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Left Section */
+.footer-left {
+    flex: 1;
+    min-width: 250px;
+}
+
+.logo img {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Right Section */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 3;
+    justify-content: space-between;
+}
+
+.footer-column {
+    min-width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
